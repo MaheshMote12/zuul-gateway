@@ -25,3 +25,5 @@ http://localhost:9000/api/info/
 > invoke http://localhost:8000/api/info/ (from gateway) 
 > check the console log. it will print from what instance the request is received 
 > with its server port.
+> http://localhost:{port}/api/info/{id} will fetch record by id
+> http://localhost:{port}/api/info/  returns all records.
