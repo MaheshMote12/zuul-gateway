@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: zuul-no-ribbon
+
+server:
+  port: 9000
+
+zuul:
+  prefix: /api
+  routes:
+    info:
+      path: /info/**
+      serviceId: info
+      strip-prefix: false
+  ignored-services: '*'
+ribbon:
+  eureka:
+    enabled: false
+
+info:
+  ribbon:
+    listOfServers: http://localhost:8080/api/    
+    
+eureka:  client:    fetch-registry: true    
