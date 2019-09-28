@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: zuul-with-ribbon
+
+server:
+  port: 8000
+
+zuul:
+  prefix: /api
+  routes:
+    info:
+      path: /info/**
+      serviceId: info
+      strip-prefix: false
+  ignored-services: '*'
+ribbon:
+  eureka:
+    enabled: true
+
+    
+    
+eureka:  client:    fetch-registry: true    
